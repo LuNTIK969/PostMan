@@ -22,7 +22,7 @@ class MobileBankApiTest {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("some data"))
+                .body("data", equalTo("soma data"))
         ;
     }
 
@@ -42,8 +42,8 @@ class MobileBankApiTest {
                 .then()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("args.one", equalTo("paramOne"))
-                .body("args.two", equalTo("paramTwo"))
+                .body("args.one", equalTo("paramTwo"))
+                .body("args.two", equalTo("paramOne"))
                 .body("args.three", equalTo("paramThree"));
     }
 }
